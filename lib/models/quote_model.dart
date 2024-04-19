@@ -15,7 +15,7 @@ final class QuoteModel {
     required this.emojies,
   });
 
-  factory QuoteModel.fromJson(Map<String, dynamic> json) {
+  factory QuoteModel.fromJson(Map<dynamic, dynamic> json) {
     return QuoteModel(
       qid: json['qid'],
       timestamp: json['timestamp'],

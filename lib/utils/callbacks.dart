@@ -26,7 +26,7 @@ void showToast(BuildContext context, String message, Color color) {
 Future<void> init() async {
   Hive.init((await getApplicationDocumentsDirectory()).path);
   user = await Hive.openBox("user");
-  //await user!.clear();
+  await user!.clear();
   if (!user!.containsKey("quotes")) {
     user!.put("quotes", <Map<String, dynamic>>[]);
   }
